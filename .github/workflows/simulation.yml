@@ -1,0 +1,20 @@
+name: Simulation verification
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: sudo apt-get update && sudo apt-get install -y libgl1 libglfw3 xvfb xauth
+      - run: python -m pip install -r requirements.txt
+      - run: xvfb-run -a python -m pytest -q
+      - run: xvfb-run -a python -m drone_sim.benchmark --runs 10 --camera-runs 2 --output outputs/ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: simulation-report
+          path: outputs/ci
