@@ -1,0 +1,141 @@
+{
+  "success": true,
+  "stage": "COMPLETE",
+  "reason": "reflight_height_reached",
+  "simulation_seconds": 26.239999999999064,
+  "vision_mode": "camera",
+  "seed": 42,
+  "landing": {
+    "time": 15.880000000001083,
+    "x": -0.001719977136356933,
+    "y": 0.0032291682405641265,
+    "xy_error": 0.0036586676366484306,
+    "vertical_speed": 0.0220407478179139,
+    "on_pad": true
+  },
+  "soc": 0.6432492357789235,
+  "events": [
+    {
+      "time": 0.08,
+      "from": "ACQUIRE",
+      "to": "ALIGN",
+      "reason": "marker_acquired"
+    },
+    {
+      "time": 4.12,
+      "from": "ALIGN",
+      "to": "DESCEND",
+      "reason": "alignment_stable"
+    },
+    {
+      "time": 8.24,
+      "from": "DESCEND",
+      "to": "ALIGN",
+      "reason": "vision_lost_stop_descent"
+    },
+    {
+      "time": 9.08,
+      "from": "ALIGN",
+      "to": "DESCEND",
+      "reason": "alignment_stable"
+    },
+    {
+      "time": 12.84,
+      "from": "DESCEND",
+      "to": "LAND",
+      "reason": "handoff_to_onboard_landing"
+    },
+    {
+      "time": 16.12,
+      "from": "LAND",
+      "to": "DOCK",
+      "reason": "contact_and_motors_off"
+    },
+    {
+      "time": 17.12,
+      "from": "DOCK",
+      "to": "CHARGE",
+      "reason": "dock_contact"
+    },
+    {
+      "time": 22.76,
+      "from": "CHARGE",
+      "to": "RELEASE",
+      "reason": "charge_target_reached"
+    },
+    {
+      "time": 23.36,
+      "from": "RELEASE",
+      "to": "REFLY",
+      "reason": "dock_released"
+    },
+    {
+      "time": 26.2,
+      "from": "REFLY",
+      "to": "COMPLETE",
+      "reason": "reflight_height_reached"
+    }
+  ],
+  "config": {
+    "physics_dt": 0.005,
+    "control_dt": 0.04,
+    "mass": 0.087,
+    "motor_tau": 0.055,
+    "max_speed": 0.65,
+    "max_yaw_rate": 1.0,
+    "max_tilt": 0.32,
+    "velocity_kp_xy": 8.0,
+    "velocity_ki_xy": 4.0,
+    "velocity_kp_z": 5.0,
+    "velocity_ki_z": 2.0,
+    "command_latency": 0.08,
+    "camera_latency": 0.08,
+    "camera_hz": 25.0,
+    "camera_width": 640,
+    "camera_height": 480,
+    "camera_fovy": 70.0,
+    "camera_z": 0.045,
+    "marker_size": 0.1,
+    "marker_id": 7,
+    "marker_z": -0.024,
+    "pad_top": 0.04,
+    "feet_z": -0.052,
+    "initial_x": 0.3,
+    "initial_y": -0.18,
+    "initial_z": 1.2,
+    "initial_yaw": 0.25,
+    "wind_accel": 0.045,
+    "vision_dropout": 0.015,
+    "pose_noise": 0.002,
+    "xy_tolerance": 0.025,
+    "yaw_tolerance": 0.10471975511965978,
+    "stable_time": 0.8,
+    "descent_speed": 0.12,
+    "handoff_height": 0.34,
+    "handoff_xy_tolerance": 0.018,
+    "handoff_stable_sec": 0.4,
+    "reacquire_error": 0.055,
+    "pose_max_age": 0.25,
+    "vision_abort_sec": 2.0,
+    "acquisition_timeout": 60.0,
+    "land_timeout": 12.0,
+    "abort_land_timeout": 30.0,
+    "dock_radius": 0.045,
+    "electrode_radius": 0.035,
+    "dock_yaw_tolerance": 0.20943951023931956,
+    "dock_dwell": 1.0,
+    "battery_capacity_wh": 4.18,
+    "charge_power_w": 2.5,
+    "flight_power_w": 15.0,
+    "charge_time_scale": 60,
+    "initial_soc": 0.6,
+    "reflight_soc": 0.64,
+    "charge_timeout": 60.0,
+    "reflight_height": 0.9,
+    "kp_xy": 1.25,
+    "ki_xy": 0.08,
+    "kd_xy": 0.3,
+    "kp_yaw": 1.6,
+    "seed": 42
+  }
+}

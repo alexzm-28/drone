@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-27",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.4",
+    "opencv": "5.0.0",
+    "mujoco": "3.17.0"
+  },
+  "automated_tests": 38,
+  "runs": 116,
+  "passed": 116,
+  "wall_seconds": 183.85115629999973,
+  "source_sha256": {
+    "drone_sim/__init__.py": "55bfd3c90373921c11b826d81d38edfb8dcd15f34a283445b164f6f8cfdd77ca",
+    "drone_sim/__main__.py": "71837522fdbc7a090e37a24901d50f26ecbe0be17aa7c2af5a4ee962f3e986c1",
+    "drone_sim/app.py": "c59a9d97d42e32134112eca388d9b811329dc943604d23a44f97f1956c710b10",
+    "drone_sim/benchmark.py": "3335d4e8f26e17bd440b8375673f068c2c873b5bd3afa9f7919c7c66b89cda9a",
+    "drone_sim/config.py": "36ebfdb5263bff240956ce2ea92944dafc658472c2983a71fcad0680cf767992",
+    "drone_sim/control.py": "64606f1fd2a2896f3244a3b82187bfd610cf3c816ce4cf7b6b8f5021876c9b50",
+    "drone_sim/scene.py": "26939e711f675066a2264fe75b5a10bb30b288f52ff9f7d15981275d269dd13d",
+    "drone_sim/simulation.py": "795f98a67ad0f85752786dd81d9489beaab52e6afd8adbc753ee8786882fb5c9",
+    "drone_sim/vision.py": "5a247df5cb191a7af19357bedbe5c6543c055b766e2da59fee074195b4be6823"
+  }
+}
